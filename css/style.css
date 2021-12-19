@@ -1,33 +1,55 @@
-table,
-th,
-td {
-  border: 2px solid black;
-  padding: 10px;
-  border-collapse: collapse;
+:root{
+    --main-bg-img: url("https://kaboompics.com/cache/7/1/d/4/9/71d495b027be862bfa29d524b5720f3681e00e68.jpeg");
 }
-
-caption {
-  font-size: 20px;
-  font-weight: bold;
+ 
+body, html {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
 }
-tfoot {
-  background-color: gray;
+ 
+ 
+body {
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: var(--main-bg-img);
+  background-size: cover;
+  background-position: center;
+  font-family: 'Rajdhani', sans-serif;
 }
-thead {
-  background-color: darkslategray;
-  color: white;
+ 
+*, *:before, *:after {
+  box-sizing: border-box;
 }
-
-tr:nth-child(odd) td:nth-child(odd) {
-  background-color: darkturquoise;
+ 
+.glass {
+  height: 100%;
+  width: 100%;
+  background-image: var(--main-bg-img);
+  background-size: cover;
+  background-position: center;
+  clip-path: inset(10em);
+  filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-tr:nth-child(odd) td:nth-child(even) {
-  background-color: paleturquoise;
+ 
+.drop-shadow {
+  height: 100%;
+  width: 100%;
+  filter:  drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.50));
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-tr:nth-child(even) td:nth-child(odd) {
-  background-color: paleturquoise;
-}
-tr:nth-child(even) td:nth-child(even) {
-  background-color: azure;
-}
+   
+.drop-shadow > span {
+    position: absolute;
+    z-index:2;
+    color: white;
+    font-size: 4em;
+    letter-spacing: 0.75em;
+    padding-left: 0.5em;
+  }
